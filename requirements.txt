@@ -1,4 +1,7 @@
-﻿streamlit
-plotly
-networkx
-psutil
+﻿streamlit==1.32.0
+plotly==5.18.0
+networkx==3.2
+psutil==5.9.6
+requests==2.31.0
+beautifulsoup4==4.12.2
+streamlit-extras==0.4.0
