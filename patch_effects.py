@@ -26,7 +26,7 @@ EFFECTS = '''st.markdown("""
 
 src = io.open("app.py", encoding="utf-8").read()
 if "grid-bg" in src:
-    print("ЭФФЕКТЫ УЖЕ ПРИСУТСТВУЮТ, ИЗМЕНЕНИЙ НЕТ")
+    print("PATCH: эффекты уже в app.py")
 else:
     idx = src.find("set_page_config")
     if idx == -1:
@@ -35,4 +35,4 @@ else:
         end = src.find("\n", idx)
         src = src[: end + 1] + "\n" + EFFECTS + "\n" + src[end + 1 :]
     io.open("app.py", "w", encoding="utf-8").write(src)
-    print("ЭФФЕКТЫ ИМПЕРИИ ВНЕДРЕНЫ В app.py")
+    print("PATCH: эффекты внедрены в app.py")
