@@ -7,7 +7,9 @@ import csv
 import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from bs4 import BeautifulSoup
+def _get_bs4():
+    from bs4 import BeautifulSoup
+    return BeautifulSoup
 
 EMAIL_CONFIG = "email_config.json"
 EMAIL_PATTERNS = [
@@ -31,7 +33,7 @@ def find_emails_on_website(domain):
         try:
             r = requests.get(url, headers=headers, timeout=8, verify=False)
             if r.status_code == 200:
-                soup = BeautifulSoup(r.text, "html.parser")
+                soup = _get_bs4()(r.text, "html.parser")
                 found = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", soup.get_text())
                 emails.update(found)
         except:
