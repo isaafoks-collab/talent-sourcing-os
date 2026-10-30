@@ -1,4 +1,10 @@
 ﻿import streamlit as st, plotly.graph_objects as go, networkx as nx, json, os
+
+import email_automation as ea
+
+def run_auto():
+    logs = ea.run_auto_campaign()
+    return logs
 from datetime import datetime
 
 st.set_page_config(page_title="TalentSourcing OS", page_icon="🎯", layout="wide", initial_sidebar_state="expanded")
@@ -90,3 +96,11 @@ with c2:
     with t2:
         for l in reversed(st.session_state.logs[-50:]): 
             st.markdown(f'<div class="cmd">{l}</div>',unsafe_allow_html=True)
+
+st.markdown("---")
+st.markdown("### 📧 Автоматическая рассылка откликов")
+st.markdown("Система сама найдёт email компаний из tracker.csv, проверит валидность и отправит готовые письма.")
+if st.button("🚀 ЗАПУСТИТЬ АВТО-РАССЫЛКУ", use_container_width=True, type="primary"):
+    with st.spinner("Выполняю..."):
+        logs = run_auto()
+        st.markdown('<div class="terminal">' + '<br>'.join(logs) + '</div>', unsafe_allow_html=True)
