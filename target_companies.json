@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Toptal",
+    "domain": "toptal.com",
+    "url": "https://toptal.com/careers",
+    "tags": "freelance_platform",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "Upwork",
+    "domain": "upwork.com",
+    "url": "https://upwork.com/careers",
+    "tags": "freelance_platform",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "GitLab",
+    "domain": "gitlab.com",
+    "url": "https://gitlab.com/groups/gitlab-org/-/jobs",
+    "tags": "remote_first",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "Automattic",
+    "domain": "automattic.com",
+    "url": "https://automattic.com/work-with-us",
+    "tags": "wordpress",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "Zapier",
+    "domain": "zapier.com",
+    "url": "https://zapier.com/jobs",
+    "tags": "automation",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "Buffer",
+    "domain": "buffer.com",
+    "url": "https://buffer.com/journey",
+    "tags": "social_media",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "InVision",
+    "domain": "invisionapp.com",
+    "url": "https://invisionapp.com/careers",
+    "tags": "design",
+    "source": "Hardcoded"
+  },
+  {
+    "name": "Elastic",
+    "domain": "elastic.co",
+    "url": "https://elastic.co/about/hiring",
+    "tags": "search",
+    "source": "Hardcoded"
+  }
+]

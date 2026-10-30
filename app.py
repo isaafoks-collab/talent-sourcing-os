@@ -1,6 +1,5 @@
 ﻿import streamlit as st, plotly.graph_objects as go, networkx as nx, json, os
 
-import email_automation as ea
 
 def run_auto():
     logs = ea.run_auto_campaign()
@@ -98,7 +97,6 @@ with c2:
             st.markdown(f'<div class="cmd">{l}</div>',unsafe_allow_html=True)
 
 st.markdown("---")
-st.markdown("### 📧 Автоматическая рассылка откликов")
 st.markdown("Система сама найдёт email компаний из tracker.csv, проверит валидность и отправит готовые письма.")
 if st.button("🚀 ЗАПУСТИТЬ АВТО-РАССЫЛКУ", use_container_width=True, type="primary"):
     with st.spinner("Выполняю..."):
