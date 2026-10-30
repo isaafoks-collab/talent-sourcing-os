@@ -1,0 +1,11 @@
+﻿{
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5-coder:3b",
+    "api_base": "http://localhost:11434"
+  },
+  "auto_run": true,
+  "verbose": false,
+  "safe_mode": true,
+  "loop": true
+}
