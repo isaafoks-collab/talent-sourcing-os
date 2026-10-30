@@ -35,4 +35,4 @@ else:
         end = src.find("\n", idx)
         src = src[: end + 1] + "\n" + EFFECTS + "\n" + src[end + 1 :]
     io.open("app.py", "w", encoding="utf-8").write(src)
-    print("PATCH: эффекты внедрены в app.py")
+    print("PATCH: эффекты внедрены в рабочую базу")
